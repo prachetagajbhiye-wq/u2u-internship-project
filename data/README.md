@@ -268,6 +268,21 @@ Total Datasets Collected: 9
 
 ---
 
+# Data Processing and Validation
+
+The collected datasets are validated before being used...
+
+Implementation:
+
+scripts/data_cleaning.py
+
+Generated Outputs:
+
+- cleaned_student_performance.csv
+- cleaned_educational_qa.csv
+
+---
+
 # Future Scope
 
 Future versions of the platform may include:
@@ -277,3 +292,4 @@ Future versions of the platform may include:
 - Student Interaction Logs
 - Personalized Learning Histories
 - Evaluation Datasets
+

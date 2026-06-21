@@ -110,6 +110,20 @@ Supports:
 
 ---
 
+## Data Validation Strategy
+
+To maintain dataset quality, structured datasets undergo validation before being used in downstream AI workflows.
+
+Validation checks include:
+
+- Missing value detection
+- Duplicate record detection
+- Dataset structure verification
+
+The validation process is automated using Python and Pandas through the data_cleaning.py workflow.
+
+---
+
 ## Future Expansion
 
 Future versions of the platform may include:
