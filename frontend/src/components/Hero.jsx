@@ -1,85 +1,34 @@
-import { useState } from "react";
-
 function Hero() {
-  const [inputQuestion, setInputQuestion] = useState("");
-  const [result, setResult] = useState(null);
-
-  const askQuestion = async () => {
-    if (!inputQuestion.trim()) {
-      alert("Please enter a question.");
-      return;
-    }
-
-    const response = await fetch(
-      `http://127.0.0.1:5000/answer?question=${encodeURIComponent(inputQuestion)}`
-    );
-
-    const data = await response.json();
-    setResult(data);
-  };
-
-  const getRandomQuestion = async () => {
-    const response = await fetch("http://127.0.0.1:5000/random-question");
-    const data = await response.json();
-
-    setResult(data);
-  };
-
   return (
     <section className="hero">
-      <h1>AI-Powered Educational Learning Platform</h1>
+
+      <div className="hero-pill">
+        🚀 AI Powered Learning Platform
+      </div>
+
+      <h1>
+        Your Personal
+        <br />
+        AI Study Assistant
+      </h1>
 
       <p>
-        Learn smarter with AI-generated answers,
-        educational resources,
-        and personalized learning.
+        Search your knowledge base instantly or let Gemini AI answer
+        anything using intelligent fallback.
       </p>
 
-      <input
-        type="text"
-        placeholder="Ask a question..."
-        value={inputQuestion}
-        onChange={(e) => setInputQuestion(e.target.value)}
-      />
+      <div className="hero-buttons">
 
-      <br />
-      <br />
+        <button className="primary-btn">
+          Start Learning
+        </button>
 
-      <button onClick={askQuestion}>
-        Ask
-      </button>
+        <button className="secondary-btn">
+          Explore Features
+        </button>
 
-      <button
-        onClick={getRandomQuestion}
-        style={{ marginLeft: "10px" }}
-      >
-        Random Question
-      </button>
+      </div>
 
-     {result && (
-  <div className="question-card">
-    {result.message ? (
-      <p><strong>{result.message}</strong></p>
-    ) : (
-      <>
-        <h2>{result.question}</h2>
-
-        <p>
-          <strong>Answer:</strong> {result.answer}
-        </p>
-
-        <p>
-          <strong>Subject:</strong> {result.subject}
-        </p>
-
-        <p>
-          <strong>Difficulty:</strong> {result.difficulty}
-        </p>
-      </>
-    )}
-
-  </div>
-)}
     </section>
   );
 }

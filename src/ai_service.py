@@ -26,9 +26,16 @@ Question:
 {question}
 """
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
-    )
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
 
-    return response.text
+        return response.text
+
+    except Exception:
+        return (
+            "⚠️ The AI service is currently busy. "
+            "Please try again in a few moments."
+        )

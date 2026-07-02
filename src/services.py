@@ -66,6 +66,7 @@ def get_answer(question):
 
     best_match = None
     best_score = 0
+    total_keywords = len(words)
 
     for _, row in df.iterrows():
 
@@ -82,7 +83,11 @@ def get_answer(question):
             best_match = row
 
     # If we found a good match in CSV, return it
-    if best_match is not None and best_score > 0:
+    confidence = best_score / total_keywords
+
+    print("Confidence:", confidence)
+
+    if best_match is not None and confidence >= 0.6:
         return {
             "source": "CSV",
             "question": best_match["question"],
