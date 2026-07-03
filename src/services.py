@@ -1,6 +1,6 @@
 from data_loader import df
-from ai_service import generate_ai_answer
-from rag_service import retrieve_context
+from rag_service import get_rag_answer
+
 
 def get_all_questions():
     return df.to_dict(orient="records")
@@ -30,16 +30,12 @@ def search_questions(keyword):
 
 def get_answer(question):
 
-    context, sources = retrieve_context(question)
-
-    answer = generate_ai_answer(
-        question,
-        context
-    )
+    result = get_rag_answer(question)
 
     return {
-        "source": "RAG + Gemini",
+        "source": result["sources"],
         "question": question,
-        "answer": answer,
-        "sources": sources
+        "answer": result["answer"],
+        "subject": "Knowledge Base",
+        "difficulty": "-"
     }

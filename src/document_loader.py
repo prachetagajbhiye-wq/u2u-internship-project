@@ -26,17 +26,11 @@ def load_documents():
 
                 for _, row in df.iterrows():
 
-                    text = " | ".join(
-                        str(value)
-                        for value in row.values
-                    )
+                    text = " | ".join(str(value) for value in row.values)
 
                     documents.append({
-
                         "text": text,
-
                         "source": file
-
                     })
 
     # ---------------- PDF ----------------
@@ -56,15 +50,13 @@ def load_documents():
                 text = ""
 
                 for page in pdf:
-
                     text += page.get_text()
 
+                pdf.close()
+
                 documents.append({
-
                     "text": text,
-
                     "source": file
-
                 })
 
     # ---------------- JSON ----------------
@@ -80,15 +72,11 @@ def load_documents():
                 path = os.path.join(json_folder, file)
 
                 with open(path, "r", encoding="utf-8") as f:
-
                     data = json.load(f)
 
                 documents.append({
-
-                    "text": json.dumps(data),
-
+                    "text": json.dumps(data, indent=2),
                     "source": file
-
                 })
 
     # ---------------- Excel ----------------
@@ -108,11 +96,8 @@ def load_documents():
                 for _, row in df.iterrows():
 
                     documents.append({
-
                         "text": " | ".join(str(v) for v in row.values),
-
                         "source": file
-
                     })
 
     return documents

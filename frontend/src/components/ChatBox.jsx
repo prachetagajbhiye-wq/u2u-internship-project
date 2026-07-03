@@ -100,8 +100,8 @@ function ChatBox() {
               <div className="answer-header">
 
                 <span className="badge">
-                  {message.source}
-                </span>
+                  📚 Knowledge Base
+                  </span>
 
                 <button
                   className="copy-btn"
@@ -119,12 +119,22 @@ function ChatBox() {
               </p>
 
               <div className="meta">
-
                 <span>📚 {message.subject}</span>
-
                 <span>⭐ {message.difficulty}</span>
-
-              </div>
+                </div>
+                {message.source && (
+                  <div className="sources">
+                    <strong>📄 Sources:</strong>
+                    <ul>
+                      {(Array.isArray(message.source)
+                      ? message.source
+                      : [message.source]
+                    ).map((src, index) => (
+                    <li key={index}>{src}</li>
+                    ))}
+                    </ul>
+                    </div>
+                  )}
 
             </div>
 

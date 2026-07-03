@@ -1,39 +1,37 @@
 import fitz
 import os
 
-PDF_FOLDER = "../documents"
 
-
-def load_pdf_text():
+def load_pdfs(folder="../documents/pdf"):
     """
-    Reads every PDF inside the documents folder
-    and combines all text into one string.
+    Reads every PDF inside the folder.
+    Returns a list of dictionaries.
     """
 
-    all_text = ""
+    documents = []
 
-    if not os.path.exists(PDF_FOLDER):
-        return ""
+    if not os.path.exists(folder):
+        return documents
 
-    for file in os.listdir(PDF_FOLDER):
+    for filename in os.listdir(folder):
 
-        if file.endswith(".pdf"):
+        if not filename.endswith(".pdf"):
+            continue
 
-            pdf_path = os.path.join(PDF_FOLDER, file)
+        path = os.path.join(folder, filename)
 
-            document = fitz.open(pdf_path)
+        pdf = fitz.open(path)
 
-            for page in document:
+        text = ""
 
-                all_text += page.get_text()
+        for page in pdf:
+            text += page.get_text()
 
-            document.close()
+        pdf.close()
 
-    return all_text
+        documents.append({
+            "text": text,
+            "source": filename
+        })
 
-
-if __name__ == "__main__":
-
-    text = load_pdf_text()
-
-    print(text[:1000])
+    return documents
