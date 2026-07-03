@@ -1,6 +1,6 @@
 from data_loader import df
 from ai_service import generate_ai_answer
-
+from rag_service import retrieve_context
 
 def get_all_questions():
     return df.to_dict(orient="records")
@@ -28,81 +28,18 @@ def search_questions(keyword):
 
     return filtered_df.to_dict(orient="records")
 
-
 def get_answer(question):
 
-    search = question.lower()
+    context, sources = retrieve_context(question)
 
-    # Remove punctuation
-    for char in ["?", ".", ",", "!", ":"]:
-        search = search.replace(char, "")
-
-    # Remove common words
-    stop_words = [
-        "what",
-        "is",
-        "the",
-        "a",
-        "an",
-        "explain",
-        "tell",
-        "me",
-        "about",
-        "define",
-        "please",
-        "of"
-    ]
-
-    words = []
-
-    for word in search.split():
-        if word not in stop_words:
-            words.append(word)
-
-    if len(words) == 0:
-        return {
-            "message": "Please ask a meaningful question."
-        }
-
-    best_match = None
-    best_score = 0
-    total_keywords = len(words)
-
-    for _, row in df.iterrows():
-
-        db_question = row["question"].lower()
-
-        score = 0
-
-        for word in words:
-            if word in db_question:
-                score += 1
-
-        if score > best_score:
-            best_score = score
-            best_match = row
-
-    # If we found a good match in CSV, return it
-    confidence = best_score / total_keywords
-
-    print("Confidence:", confidence)
-
-    if best_match is not None and confidence >= 0.6:
-        return {
-            "source": "CSV",
-            "question": best_match["question"],
-            "answer": best_match["answer"],
-            "subject": best_match["subject"],
-            "difficulty": best_match["difficulty"]
-        }
-
-    # Otherwise ask Gemini
-    ai_answer = generate_ai_answer(question)
+    answer = generate_ai_answer(
+        question,
+        context
+    )
 
     return {
-        "source": "Gemini AI",
+        "source": "RAG + Gemini",
         "question": question,
-        "answer": ai_answer,
-        "subject": "AI Generated",
-        "difficulty": "-"
+        "answer": answer,
+        "sources": sources
     }

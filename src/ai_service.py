@@ -13,17 +13,25 @@ api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 
-def generate_ai_answer(question):
+def generate_ai_answer(question, context=""):
 
     prompt = f"""
 You are an educational AI assistant.
 
-Explain concepts clearly and simply.
+Answer ONLY using the provided context.
 
-Keep the answer under 200 words.
+If the context is insufficient,
+say that the knowledge base does not contain enough information.
+
+Context:
+
+{context}
 
 Question:
+
 {question}
+
+Give a clear explanation.
 """
 
     try:
