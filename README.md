@@ -88,26 +88,34 @@ u2u-internship-project/
 - Kunjal Praveen Divecha
 - Srushti Sharad Dangre
 - Mayuri Mahadev Sonwane
+- Sachi Sachin Patil
+- Samiksha Sanjay More
 - Trisha Dash
 - Shravani Jaiprakash Gajbhiye
 - Pari Shukla
-- Sachi Sachin Patil
 - Ashwini Vitthalrao Lamdade
-- Samiksha Sanjay More
 
 ---
 
-## Presentation
+## Project Demo
 
-The project presentation is available in the `presentation/` folder.
+### Presentation
+- presentation/AI_Learning_Platform_Presentation.pptx
 
+### Demo Video
+- demo/Demo_Video.mp4
+Link : https://drive.google.com/drive/folders/1r0_h5TWY_gWAawVYLBV4656hrpxfNMbS?usp=sharing
 ---
 
-## Demo Video
+## Future Enhancements
 
-(Add the Google Drive or YouTube link after recording.)
-
----
+- Voice-based interaction
+- Flashcard generation
+- Quiz generation
+- User authentication
+- Learning analytics dashboard
+- Multi-document reasoning
+- Deployment on cloud infrastructure
 
 ## Future Improvements
 
