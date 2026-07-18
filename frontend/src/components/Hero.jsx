@@ -14,7 +14,7 @@ function Hero() {
 
       <p>
         Search your knowledge base instantly or let Gemini AI answer
-        anything using intelligent fallback.
+        educational questions using Retrieval Augmented Generation (RAG).
       </p>
 
       <div className="hero-buttons">
@@ -26,6 +26,30 @@ function Hero() {
         <button className="secondary-btn">
           Explore Features
         </button>
+
+      </div>
+
+      <div className="stats">
+
+        <div className="stat-card">
+          <h2>1072</h2>
+          <p>📚 Documents</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>2692</h2>
+          <p>🧠 Embeddings</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>4</h2>
+          <p>📄 Sources</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>Gemini</h2>
+          <p>🤖 AI Model</p>
+        </div>
 
       </div>
 

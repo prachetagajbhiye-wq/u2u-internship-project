@@ -1,60 +1,27 @@
-# AI-Powered Educational Learning Platform
+# 🎓 AI-Powered Educational Learning Platform
 
 ## Project Overview
 
-This project aims to build an advanced AI-powered educational learning platform using Large Language Models (LLMs), Retrieval Augmented Generation (RAG), Vector Databases, Embedding Models, Speech Processing, and Evaluation Frameworks.
+The AI-Powered Educational Learning Platform is a web application that helps students learn using Artificial Intelligence and Retrieval-Augmented Generation (RAG).
 
-The platform enables students to upload study materials, interact with documents through AI-powered chat, generate quizzes and flashcards, receive personalized learning assistance, and evaluate response quality using modern RAG evaluation techniques.
-
----
-
-## Project Objectives
-
-### Primary Goals
-
-- Build a Vector Database
-- Implement an Advanced RAG Pipeline
-- Evaluate and Improve Response Quality
+Users can ask educational questions through a chat interface, upload learning materials, and receive AI-generated answers based on a custom knowledge base.
 
 ---
 
-## Core Features
+## Features
 
-### Document Intelligence
-
-- Chat with Documents
-- Document Upload Pipeline
-- Multi-Document Comparison
-- Source Citations
-- Conversation Memory
-
-### AI Learning Features
-
-- Flashcard Generator
-- Quiz Generator
-- Adaptive Quiz System
-- Mind Map Generator
-- Smart Notes
-- AI Learning Companion
-
-### Accessibility
-
-- Voice Assistant
-- Text-to-Speech
-- Language Translation
-- Dark Mode
-
-### Learning Analytics
-
-- Smart Study Planner
-- Weakness Detection Engine
-- PYQ Retrieval System
-
-### Evaluation Layer
-
-- Hallucination Detection
-- Answer Evaluation Module
-- RAG Evaluation Dashboard
+- 🤖 AI-powered educational chatbot
+- 📚 Retrieval-Augmented Generation (RAG)
+- 🔍 Semantic search using ChromaDB
+- 📄 PDF document support
+- 📊 CSV dataset support
+- 📑 Excel file support
+- 📤 Upload educational documents
+- 💬 Interactive chat interface
+- 📋 Copy responses
+- 🗑 Clear chat
+- 💡 Suggested questions
+- 📚 Source citations
 
 ---
 
@@ -62,61 +29,96 @@ The platform enables students to upload study materials, interact with documents
 
 ### Frontend
 
-- React.js / Next.js
-- Tailwind CSS
+- React
+- Vite
+- CSS
 
 ### Backend
 
-- FastAPI (Python)
+- Python
+- Flask
 
-### AI & RAG
+### AI
 
-- OpenAI / LLM APIs
-- LangChain
-- Embedding Models
-- RAG Pipeline
+- Google Gemini 2.5 Flash
+- Sentence Transformers (all-MiniLM-L6-v2)
 
 ### Vector Database
 
 - ChromaDB
-- Pinecone
-- FAISS
-- Weaviate
 
-### Evaluation
+### Document Processing
 
-- RAGAS
-- DeepEval
-- TruLens
+- PyMuPDF
+- Pandas
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```text
-data/
-src/
-reports/
-deployment/
+u2u-internship-project/
+
+├── frontend/
+├── src/
+├── data/
+├── documents/
+├── chroma_db/
+├── reports/
+├── presentation/
+└── README.md
 ```
+
+---
+
+## How It Works
+
+1. User enters a question.
+2. The question is converted into an embedding.
+3. ChromaDB retrieves the most relevant document chunks.
+4. Retrieved context is sent to Google Gemini.
+5. Gemini generates the final answer.
+6. The answer and source documents are displayed.
 
 ---
 
 ## Team Members
 
--PRACHETA RAJENDRA GAJBHIYE/n
--KUNJAL PRAVEEN DIVECHA/n
--SRUSHTI SHARAD DANGRE/n
--MAYURI MAHADEV SONWANE/n
--TRISHA DASH/n
--SHRAVANI JAIPRAKASH GAJBHIYE/n
--PARI SHUKLA/n
--SACHI SACHIN PATIL/n
--ASHWINI VITTHALRAO LAMDADE/n
--SAMIKSHA SANJAY MORE
+- Pracheta Rajendra Gajbhiye
+- Kunjal Praveen Divecha
+- Srushti Sharad Dangre
+- Mayuri Mahadev Sonwane
+- Trisha Dash
+- Shravani Jaiprakash Gajbhiye
+- Pari Shukla
+- Sachi Sachin Patil
+- Ashwini Vitthalrao Lamdade
+- Samiksha Sanjay More
+
+---
+
+## Presentation
+
+The project presentation is available in the `presentation/` folder.
+
+---
+
+## Demo Video
+
+(Add the Google Drive or YouTube link after recording.)
+
+---
+
+## Future Improvements
+
+- Automatic indexing of uploaded documents
+- User authentication
+- Chat history
+- Voice interaction
+- Cloud deployment
 
 ---
 
 ## Status
 
-Internship Project - Development Phase
+Completed as part of the U2U Internship Project.

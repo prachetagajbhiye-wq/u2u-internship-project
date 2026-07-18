@@ -12,29 +12,28 @@ api_key = os.getenv("GEMINI_API_KEY")
 # Create Gemini client
 client = genai.Client(api_key=api_key)
 
-
 def generate_ai_answer(question, context=""):
 
     prompt = f"""
-You are an educational AI assistant.
+    You are an educational AI assistant.
+    Use the provided context whenever it is relevant.
+    If the context contains the answer,
+    answer from it in a clear and friendly way.
+    If the context does NOT contain the answer,
+    use your own knowledge to answer correctly.
 
-Answer ONLY using the provided context.
+    At the end, mention whether the answer came from:
+    - Knowledge Base
+    - AI Knowledge
+    
+    Context:
+    {context}
 
-If the context is insufficient,
-say that the knowledge base does not contain enough information.
+    Question:
+    {question}
+    """
 
-Context:
-
-{context}
-
-Question:
-
-{question}
-
-Give a clear explanation.
-"""
-
-    try:        
+    try:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=prompt,
@@ -44,6 +43,5 @@ Give a clear explanation.
 
     except Exception:
         return (
-            "⚠️ The AI service is currently busy. "
-            "Please try again in a few moments."
+            "⚠️ AI service is currently unavailable. Please try again."
         )

@@ -1,0 +1,126 @@
+[
+  {
+    "id":1,
+    "subject":"Operating Systems",
+    "difficulty":"Easy",
+    "question":"What is an Operating System?",
+    "options":["Hardware","Software managing system resources","Programming Language","Database"],
+    "correct_answer":"Software managing system resources"
+  },
+  {
+    "id":2,
+    "subject":"Operating Systems",
+    "difficulty":"Medium",
+    "question":"What is a Process?",
+    "options":["Program in execution","Compiler","Memory Unit","Network Device"],
+    "correct_answer":"Program in execution"
+  },
+  {
+    "id":3,
+    "subject":"Operating Systems",
+    "difficulty":"Hard",
+    "question":"Which condition is associated with Deadlock?",
+    "options":["Mutual Exclusion","Caching","Hashing","Encryption"],
+    "correct_answer":"Mutual Exclusion"
+  },
+
+  {
+    "id":4,
+    "subject":"DBMS",
+    "difficulty":"Easy",
+    "question":"What is a Primary Key?",
+    "options":["Duplicate Key","Unique Identifier","Foreign Key","Index"],
+    "correct_answer":"Unique Identifier"
+  },
+  {
+    "id":5,
+    "subject":"DBMS",
+    "difficulty":"Medium",
+    "question":"What does SQL stand for?",
+    "options":["Simple Query Language","Structured Query Language","System Query Logic","Stored Query Language"],
+    "correct_answer":"Structured Query Language"
+  },
+  {
+    "id":6,
+    "subject":"DBMS",
+    "difficulty":"Hard",
+    "question":"Which property belongs to ACID?",
+    "options":["Atomicity","Scalability","Indexing","Caching"],
+    "correct_answer":"Atomicity"
+  },
+
+  {
+    "id":7,
+    "subject":"Computer Networks",
+    "difficulty":"Easy",
+    "question":"What does TCP provide?",
+    "options":["Connection-Oriented Communication","Connectionless Communication","Encryption","Storage"],
+    "correct_answer":"Connection-Oriented Communication"
+  },
+  {
+    "id":8,
+    "subject":"Computer Networks",
+    "difficulty":"Medium",
+    "question":"What does DNS do?",
+    "options":["Stores Databases","Translates Domain Names","Encrypts Data","Allocates RAM"],
+    "correct_answer":"Translates Domain Names"
+  },
+  {
+    "id":9,
+    "subject":"Computer Networks",
+    "difficulty":"Hard",
+    "question":"Which protocol is connectionless?",
+    "options":["TCP","UDP","HTTP","HTTPS"],
+    "correct_answer":"UDP"
+  },
+
+  {
+    "id":10,
+    "subject":"Data Structures",
+    "difficulty":"Easy",
+    "question":"Which structure follows FIFO?",
+    "options":["Stack","Queue","Tree","Graph"],
+    "correct_answer":"Queue"
+  },
+  {
+    "id":11,
+    "subject":"Data Structures",
+    "difficulty":"Medium",
+    "question":"Which structure follows LIFO?",
+    "options":["Queue","Stack","Tree","Graph"],
+    "correct_answer":"Stack"
+  },
+  {
+    "id":12,
+    "subject":"Data Structures",
+    "difficulty":"Hard",
+    "question":"What is a Binary Search Tree?",
+    "options":["Sorted Tree","Graph","Hash Table","Queue"],
+    "correct_answer":"Sorted Tree"
+  },
+
+  {
+    "id":13,
+    "subject":"AI Learning Platform",
+    "difficulty":"Easy",
+    "question":"What is RAG?",
+    "options":["Retrieval Augmented Generation","Random AI Generator","Resource Allocation Grid","Response Analysis Generator"],
+    "correct_answer":"Retrieval Augmented Generation"
+  },
+  {
+    "id":14,
+    "subject":"AI Learning Platform",
+    "difficulty":"Medium",
+    "question":"Why are embeddings used?",
+    "options":["To store images","To represent text numerically","To increase RAM","To compile code"],
+    "correct_answer":"To represent text numerically"
+  },
+  {
+    "id":15,
+    "subject":"AI Learning Platform",
+    "difficulty":"Hard",
+    "question":"What is a Vector Database used for?",
+    "options":["Video Storage","Semantic Search","Compiler Design","Operating Systems"],
+    "correct_answer":"Semantic Search"
+  }
+]

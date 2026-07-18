@@ -1,0 +1,30 @@
+[
+  {"id":1,"subject":"Operating Systems","topic":"Introduction","difficulty":"Easy","question":"What is an Operating System?","answer":"Software that manages computer hardware and software resources."},
+  {"id":2,"subject":"Operating Systems","topic":"Processes","difficulty":"Easy","question":"What is a Process?","answer":"A program in execution."},
+  {"id":3,"subject":"Operating Systems","topic":"Threads","difficulty":"Medium","question":"What is a Thread?","answer":"The smallest unit of CPU execution."},
+  {"id":4,"subject":"Operating Systems","topic":"Scheduling","difficulty":"Medium","question":"What is Process Scheduling?","answer":"The mechanism used by the OS to allocate CPU time."},
+  {"id":5,"subject":"Operating Systems","topic":"Memory Management","difficulty":"Medium","question":"What is Virtual Memory?","answer":"A memory management technique using disk space as RAM extension."},
+  {"id":6,"subject":"Operating Systems","topic":"Memory Management","difficulty":"Hard","question":"What is Paging?","answer":"A memory management scheme that divides memory into fixed-size pages."},
+  {"id":7,"subject":"Operating Systems","topic":"Deadlocks","difficulty":"Hard","question":"What is Deadlock?","answer":"A situation where processes wait indefinitely for resources."},
+
+  {"id":8,"subject":"DBMS","topic":"Introduction","difficulty":"Easy","question":"What is DBMS?","answer":"Software used to manage databases."},
+  {"id":9,"subject":"DBMS","topic":"Keys","difficulty":"Easy","question":"What is a Primary Key?","answer":"A unique identifier for records in a table."},
+  {"id":10,"subject":"DBMS","topic":"Keys","difficulty":"Easy","question":"What is a Foreign Key?","answer":"A field used to establish relationships between tables."},
+  {"id":11,"subject":"DBMS","topic":"Normalization","difficulty":"Medium","question":"What is Normalization?","answer":"The process of reducing redundancy in databases."},
+  {"id":12,"subject":"DBMS","topic":"Transactions","difficulty":"Hard","question":"What is ACID?","answer":"Properties ensuring reliable database transactions."},
+  {"id":13,"subject":"DBMS","topic":"SQL","difficulty":"Easy","question":"What is SQL?","answer":"Structured Query Language used for database operations."},
+
+  {"id":14,"subject":"Computer Networks","topic":"Protocols","difficulty":"Easy","question":"What is TCP?","answer":"A connection-oriented communication protocol."},
+  {"id":15,"subject":"Computer Networks","topic":"Protocols","difficulty":"Medium","question":"What is UDP?","answer":"A connectionless communication protocol."},
+  {"id":16,"subject":"Computer Networks","topic":"Addressing","difficulty":"Easy","question":"What is an IP Address?","answer":"A unique identifier assigned to devices on a network."},
+  {"id":17,"subject":"Computer Networks","topic":"DNS","difficulty":"Medium","question":"What is DNS?","answer":"A system that translates domain names into IP addresses."},
+  {"id":18,"subject":"Computer Networks","topic":"Web","difficulty":"Easy","question":"What is HTTP?","answer":"A protocol used to transfer web pages."},
+  {"id":19,"subject":"Computer Networks","topic":"Security","difficulty":"Medium","question":"What is HTTPS?","answer":"A secure version of HTTP using encryption."},
+
+  {"id":20,"subject":"Data Structures","topic":"Linear Structures","difficulty":"Easy","question":"What is a Stack?","answer":"A LIFO data structure."},
+  {"id":21,"subject":"Data Structures","topic":"Linear Structures","difficulty":"Easy","question":"What is a Queue?","answer":"A FIFO data structure."},
+  {"id":22,"subject":"Data Structures","topic":"Linked Lists","difficulty":"Medium","question":"What is a Linked List?","answer":"A collection of nodes connected through pointers."},
+  {"id":23,"subject":"Data Structures","topic":"Trees","difficulty":"Medium","question":"What is a Tree?","answer":"A hierarchical data structure."},
+  {"id":24,"subject":"Data Structures","topic":"Graphs","difficulty":"Hard","question":"What is a Graph?","answer":"A collection of vertices and edges."},
+  {"id":25,"subject":"Data Structures","topic":"Recursion","difficulty":"Medium","question":"What is Recursion?","answer":"A technique where a function calls itself."}
+]

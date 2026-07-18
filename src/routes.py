@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify, request
-import random
 from services import (
     get_all_questions,
     get_subjects,
@@ -9,7 +8,10 @@ from services import (
     get_answer
 )
 
+from upload_service import process_uploaded_file
+
 api = Blueprint("api", __name__)
+
 
 @api.route("/")
 def home():
@@ -18,14 +20,17 @@ def home():
         "status": "Backend is running"
     })
 
+
 @api.route("/subjects")
 def subjects():
+
     subjects = get_subjects()
 
     return jsonify({
         "count": len(subjects),
         "subjects": subjects
     })
+
 
 @api.route("/questions")
 def get_questions():
@@ -43,6 +48,7 @@ def random_question():
 
     return jsonify(get_random_question())
 
+
 @api.route("/search")
 def search():
 
@@ -54,6 +60,7 @@ def search():
         }), 400
 
     return jsonify(search_questions(keyword))
+
 
 @api.route("/answer")
 def answer():
@@ -67,3 +74,28 @@ def answer():
 
     return jsonify(get_answer(question))
 
+
+# ==========================
+# Upload Route
+# ==========================
+
+@api.route("/upload", methods=["POST"])
+def upload_file():
+
+    if "file" not in request.files:
+        return jsonify({
+            "success": False,
+            "message": "No file selected."
+        }), 400
+
+    file = request.files["file"]
+
+    if file.filename == "":
+        return jsonify({
+            "success": False,
+            "message": "No file selected."
+        }), 400
+
+    result = process_uploaded_file(file)
+
+    return jsonify(result)
